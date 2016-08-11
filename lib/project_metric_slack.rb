@@ -8,6 +8,16 @@ class ProjectMetricSlack
     @client = Slack::Web::Client.new(token: ENV["SLACK_API_TOKEN"])
   end
 
+  def image
+    num_of_members = @raw_data.length
+    normalized_member_scores = normalize_member_scores(@raw_data)
+    member_colors = {}
+    normalized_member_scores.each do |name, normalized_score|
+      member_colors[name] = Color::score_to_rgb(normalized_score)
+    end
+    member_colors
+  end
+
   def refresh
     @raw_data = get_slack_message_totals
     true
@@ -32,4 +42,14 @@ class ProjectMetricSlack
     @client.users_list.members.select{|u| members.include? u.id}.map{|u| u.name}
   end
 
+  def normalize_member_scores member_scores
+    key_values_sorted_by_value = member_scores.sort_by{|k,v| v}
+    minimum_value = key_values_sorted_by_value[0][1]
+    maximum_value = key_values_sorted_by_value[key_values_sorted_by_value.length-1][1]
+    normalized_member_scores = {}
+    member_scores.each do |name, num_messages|
+      normalized_member_scores[name] = (num_messages - minimum_value)/(maximum_value - minimum_value).to_f
+    end
+    normalized_member_scores
+  end
 end
