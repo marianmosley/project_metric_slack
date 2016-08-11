@@ -21,10 +21,8 @@ class ProjectMetricSlack
     end_time = (Time.now - (Time.now.wday).days).to_s[0,10]
     slack_message_totals = {}
     members.each do |user|
-      unless user.name == "slackbot"
-        num_messages = @client.search_all(query: "from:@#{user.name} after:#{start_time} before:#{end_time} channel:#{@channel}").messages.total
-        slack_message_totals[user.name] = num_messages
-      end
+      num_messages = @client.search_all(query: "from:user after:#{start_time} before:#{end_time} channel:#{@channel}").messages.total
+      slack_message_totals[user] = num_messages
     end
     slack_message_totals
   end
