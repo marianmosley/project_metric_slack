@@ -31,4 +31,5 @@ class ProjectMetricSlack
     members = @client.channels_list['channels'].detect{|c| c['name']== @channel}.members
     @client.users_list.members.select{|u| members.include? u.id}.map{|u| u.name}
   end
+
 end
