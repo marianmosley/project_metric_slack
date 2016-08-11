@@ -16,8 +16,7 @@ class ProjectMetricSlack
   private
 
   def get_slack_message_totals
-    members = @client.channels_list['channels'].detect{|c| c['name']== @channel}.members
-    member_names = @client.users_list.members.select{|u| members.include? u.id}.map{|u| u.name}
+    member_names = get_member_names_for_channel
     start_time = (Time.now - (7+Time.now.wday+1).days).to_s[0,10]
     end_time = (Time.now - (Time.now.wday).days).to_s[0,10]
     slack_message_totals = {}
@@ -26,5 +25,10 @@ class ProjectMetricSlack
       slack_message_totals[user_name] = num_messages
     end
     slack_message_totals
+  end
+
+  def get_member_names_for_channel
+    members = @client.channels_list['channels'].detect{|c| c['name']== @channel}.members
+    @client.users_list.members.select{|u| members.include? u.id}.map{|u| u.name}
   end
 end
