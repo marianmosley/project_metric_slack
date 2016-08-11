@@ -1,6 +1,6 @@
 require 'project_metric_slack'
 
-describe ProjectMetricSlack do
+describe ProjectMetricSlack, :vcr do
   it 'it gets raw data' do
     metric = ProjectMetricSlack.new(channel: 'websiteone')
     metric.refresh
