@@ -3,26 +3,33 @@ class ProjectMetricSlack
 
   attr_reader :raw_data
 
-  def initialize credentials
+  def initialize credentials,raw_data=nil
+    @raw_data = raw_data
     @channel = credentials[:channel]
     @client = Slack::Web::Client.new(token: ENV["SLACK_API_TOKEN"])
   end
 
   def image
+    return @image if @image
+    refresh unless @raw_data
     num_of_members = @raw_data.length
     normalized_member_scores = normalize_member_scores(@raw_data)
     @member_colors = {}
     normalized_member_scores.each do |name, normalized_score|
       @member_colors[name] = Color::rgb_to_hex(Color::score_to_rgb(normalized_score))
     end
-    puts @member_colors.length
     file_path = File.join(File.dirname(__FILE__),'svg.erb')
-    ERB.new(File.read(file_path)).result(self.send(:binding))
+    @image = ERB.new(File.read(file_path)).result(self.send(:binding))
   end
 
   def refresh
     @raw_data = get_slack_message_totals
     true
+  end
+
+  def raw_data=(new)
+    @raw_data = new
+    @image = nil
   end
 
   private

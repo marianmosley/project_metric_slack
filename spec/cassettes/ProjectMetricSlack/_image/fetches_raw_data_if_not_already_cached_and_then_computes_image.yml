@@ -20,16 +20,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
-      Content-Type:
-      - application/json; charset=utf-8
       Date:
-      - Thu, 11 Aug 2016 21:16:31 GMT
+      - Fri, 12 Aug 2016 14:31:39 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -49,13 +53,15 @@ http_interactions:
       X-Slack-Backend:
       - z
       X-Slack-Req-Id:
-      - befebd98-33a3-4b88-97d8-dcd149bfa3e0
+      - 895f7576-a589-4726-9b99-d220afdda860
       X-Xss-Protection:
       - '0'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 a497be2b49819cefc328d1fdef94a6a1.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ZGcYalnRPbqEz11DGCQrCsqnClmnKig0AZ1TAY0ZrRyfx3UiNADfMA==
     body:
       encoding: ASCII-8BIT
       string: '{"ok":true,"channels":[{"id":"C02AMMPTK","name":"agile-bot","is_channel":true,"created":1401370530,"creator":"U0285CSTX","is_archived":false,"is_general":false,"is_member":true,"members":["U0285CSTX","U0292M7AC","U0296GW23","U02979PQS","U029D000H","U029F1ND6","U02A9UCPP","U02AAL2Q9","U02AMNA93","U02AT4WKU","U02AX4NA6","U02B6JMJ6","U02BFFL2U","U02BFGZ3Q","U02BV13CJ","U02C0EWC8","U02E18KJ0","U02M744EK","U02M7CVET","U02M7HN1D","U02MAF9N6","U02MAMBRR","U02MYQ49Q","U03EGN1RK","U0A4R7PFH","U0BRZUT1B","U0C1GT7QR","U0F9DJDMJ","U0K3AL4QH"],"topic":{"value":"For
@@ -174,7 +180,7 @@ http_interactions:
         project to explore and challenge collaborative model possibilities in a desire
         to find and evolve tools for productive online collaboration.","creator":"U02AKA12Z","last_set":1413297235},"num_members":11}]}'
     http_version: 
-  recorded_at: Thu, 11 Aug 2016 21:16:31 GMT
+  recorded_at: Fri, 12 Aug 2016 14:31:39 GMT
 - request:
     method: post
     uri: https://slack.com/api/users.list
@@ -195,16 +201,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
-      Content-Type:
-      - application/json; charset=utf-8
       Date:
-      - Thu, 11 Aug 2016 21:16:32 GMT
+      - Fri, 12 Aug 2016 14:31:39 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -222,15 +232,17 @@ http_interactions:
       X-Oauth-Scopes:
       - identify,read,post,client,apps,admin
       X-Slack-Backend:
-      - z
+      - h
       X-Slack-Req-Id:
-      - 322c31f2-d1b5-4100-87c5-48a9b0ec31c4
+      - f1d85d4e-f425-44e2-af28-c2f3f808711b
       X-Xss-Protection:
       - '0'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 3e02771664c190d7cb950aae2fb3783b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - TQ93ZEZmDzpU_4O5QZmylP-weTmOx5Yo60dDzan9pGsyAXblbL-3tA==
     body:
       encoding: ASCII-8BIT
       string: '{"ok":true,"members":[{"id":"U1E6BT6TB","team_id":"T0285CSTT","name":"2uanta","deleted":false,"status":null,"color":"9f69e7","real_name":"Quan
@@ -2678,9 +2690,9 @@ http_interactions:
         European Summer Time","tz_offset":7200,"profile":{"avatar_hash":"g898bca408b4","real_name":"","real_name_normalized":"","email":"legraphiste@gmail.com","image_24":"https:\/\/secure.gravatar.com\/avatar\/898bca408b4f3f2a472953c0165ca926.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0010-24.png","image_32":"https:\/\/secure.gravatar.com\/avatar\/898bca408b4f3f2a472953c0165ca926.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0010-32.png","image_48":"https:\/\/secure.gravatar.com\/avatar\/898bca408b4f3f2a472953c0165ca926.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0010-48.png","image_72":"https:\/\/secure.gravatar.com\/avatar\/898bca408b4f3f2a472953c0165ca926.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0010-72.png","image_192":"https:\/\/secure.gravatar.com\/avatar\/898bca408b4f3f2a472953c0165ca926.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0010-192.png","image_512":"https:\/\/secure.gravatar.com\/avatar\/898bca408b4f3f2a472953c0165ca926.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0010-512.png"},"is_admin":false,"is_owner":false,"is_primary_owner":false,"is_restricted":false,"is_ultra_restricted":false,"is_bot":false,"has_2fa":false},{"id":"U1C7B3CJK","team_id":"T0285CSTT","name":"zz","deleted":false,"status":null,"color":"bb86b7","real_name":"ZawZawOo
         Oo","tz":"Asia\/Rangoon","tz_label":"Myanmar Time","tz_offset":23400,"profile":{"first_name":"ZawZawOo","last_name":"Oo","avatar_hash":"gb0f8fc6f287","real_name":"ZawZawOo
         Oo","real_name_normalized":"ZawZawOo Oo","email":"zawzawoommr@gmail.com","image_24":"https:\/\/secure.gravatar.com\/avatar\/b0f8fc6f287234cb7124f1ac47966a41.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-24.png","image_32":"https:\/\/secure.gravatar.com\/avatar\/b0f8fc6f287234cb7124f1ac47966a41.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-32.png","image_48":"https:\/\/secure.gravatar.com\/avatar\/b0f8fc6f287234cb7124f1ac47966a41.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-48.png","image_72":"https:\/\/secure.gravatar.com\/avatar\/b0f8fc6f287234cb7124f1ac47966a41.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0016-72.png","image_192":"https:\/\/secure.gravatar.com\/avatar\/b0f8fc6f287234cb7124f1ac47966a41.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0016-192.png","image_512":"https:\/\/secure.gravatar.com\/avatar\/b0f8fc6f287234cb7124f1ac47966a41.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0016-512.png"},"is_admin":false,"is_owner":false,"is_primary_owner":false,"is_restricted":false,"is_ultra_restricted":false,"is_bot":false,"has_2fa":false},{"id":"USLACKBOT","team_id":"T0285CSTT","name":"slackbot","deleted":false,"status":null,"color":"757575","real_name":"slackbot","tz":null,"tz_label":"Pacific
-        Daylight Time","tz_offset":-25200,"profile":{"first_name":"slackbot","last_name":"","image_24":"https:\/\/a.slack-edge.com\/0180\/img\/slackbot_24.png","image_32":"https:\/\/a.slack-edge.com\/2fac\/plugins\/slackbot\/assets\/service_32.png","image_48":"https:\/\/a.slack-edge.com\/2fac\/plugins\/slackbot\/assets\/service_48.png","image_72":"https:\/\/a.slack-edge.com\/0180\/img\/slackbot_72.png","image_192":"https:\/\/a.slack-edge.com\/66f9\/img\/slackbot_192.png","image_512":"https:\/\/a.slack-edge.com\/1801\/img\/slackbot_512.png","avatar_hash":"sv1444671949","real_name":"slackbot","real_name_normalized":"slackbot","email":null,"fields":null},"is_admin":false,"is_owner":false,"is_primary_owner":false,"is_restricted":false,"is_ultra_restricted":false,"is_bot":false}],"cache_ts":1470950192}'
+        Daylight Time","tz_offset":-25200,"profile":{"first_name":"slackbot","last_name":"","image_24":"https:\/\/a.slack-edge.com\/0180\/img\/slackbot_24.png","image_32":"https:\/\/a.slack-edge.com\/2fac\/plugins\/slackbot\/assets\/service_32.png","image_48":"https:\/\/a.slack-edge.com\/2fac\/plugins\/slackbot\/assets\/service_48.png","image_72":"https:\/\/a.slack-edge.com\/0180\/img\/slackbot_72.png","image_192":"https:\/\/a.slack-edge.com\/66f9\/img\/slackbot_192.png","image_512":"https:\/\/a.slack-edge.com\/1801\/img\/slackbot_512.png","avatar_hash":"sv1444671949","real_name":"slackbot","real_name_normalized":"slackbot","email":null,"fields":null},"is_admin":false,"is_owner":false,"is_primary_owner":false,"is_restricted":false,"is_ultra_restricted":false,"is_bot":false}],"cache_ts":1471012300}'
     http_version: 
-  recorded_at: Thu, 11 Aug 2016 21:16:32 GMT
+  recorded_at: Fri, 12 Aug 2016 14:31:40 GMT
 - request:
     method: post
     uri: https://slack.com/api/search.all
@@ -2701,16 +2713,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1770'
+      Connection:
+      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
-      Content-Type:
-      - application/json; charset=utf-8
       Date:
-      - Thu, 11 Aug 2016 21:16:32 GMT
+      - Fri, 12 Aug 2016 14:31:40 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -2728,15 +2744,17 @@ http_interactions:
       X-Oauth-Scopes:
       - identify,read,post,client,apps,admin
       X-Slack-Backend:
-      - z
+      - h
       X-Slack-Req-Id:
-      - 393405cf-7ca0-4f4b-945c-36da08169caf
+      - f2e892f0-039e-4626-94c8-2367a9d384c7
       X-Xss-Protection:
       - '0'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 fb63ddec72f5ddb885466333fe83d86e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - D3J7NsyoXbRLIzr-lcFeKj0G6n3RAgaa_vgRQll2s3gxp_y0Wnjbmw==
     body:
       encoding: ASCII-8BIT
       string: '{"ok":true,"query":"from:armandofox after:2016-07-30 before:2016-08-07","messages":{"total":9,"pagination":{"total_count":9,"page":1,"per_page":20,"page_count":1,"first":1,"last":9},"paging":{"count":20,"total":9,"page":1,"pages":1},"matches":[{"type":"message","user":"U02ABDJBA","username":"armandofox","ts":"1470248837.000012","team":"T0285CSTT","channel":{"id":"C1NJX7KM1","name":"projectscope","is_shared":false,"is_org_shared":false},"permalink":"https:\/\/agileventures.slack.com\/archives\/projectscope\/p1470248837000012","text":"also:
@@ -2775,7 +2793,7 @@ http_interactions:
         be good if this help text appeared in the edit form :slightly_smiling_face:  but
         it is working as designed."}]},"files":{"total":0,"pagination":{"total_count":0,"page":1,"per_page":20,"page_count":0,"first":1,"last":0},"paging":{"count":20,"total":0,"page":1,"pages":0},"matches":[]},"posts":{"total":0,"matches":[]}}'
     http_version: 
-  recorded_at: Thu, 11 Aug 2016 21:16:33 GMT
+  recorded_at: Fri, 12 Aug 2016 14:31:40 GMT
 - request:
     method: post
     uri: https://slack.com/api/search.all
@@ -2796,16 +2814,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
-      Content-Type:
-      - application/json; charset=utf-8
       Date:
-      - Thu, 11 Aug 2016 21:16:33 GMT
+      - Fri, 12 Aug 2016 14:31:40 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -2825,13 +2847,15 @@ http_interactions:
       X-Slack-Backend:
       - z
       X-Slack-Req-Id:
-      - 1e28cc1b-abd8-4c71-ab16-aba6e8c065a0
+      - 5b19940f-adb5-4721-b05e-3b51ec3cefa9
       X-Xss-Protection:
       - '0'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 fa6a26613abf7b82a2d399c330c31b47.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - OZbzIffwK4pkME-7ZSdCzVioaX_nljhUImqAnUc9CMQYlUpoWzKVsA==
     body:
       encoding: ASCII-8BIT
       string: '{"ok":true,"query":"from:francis after:2016-07-30 before:2016-08-07","messages":{"total":38,"pagination":{"total_count":38,"page":1,"per_page":20,"page_count":2,"first":1,"last":20},"paging":{"count":20,"total":38,"page":1,"pages":2},"matches":[{"type":"message","user":"U1JAH2D8R","username":"francis","ts":"1470395284.000096","team":"T0285CSTT","channel":{"id":"C02AAM8SY","name":"osra","is_shared":false,"is_org_shared":false},"permalink":"https:\/\/agileventures.slack.com\/archives\/osra\/p1470395284000096","text":"In
@@ -2863,7 +2887,7 @@ http_interactions:
         setup?","channel":""},"preview":null},{"id":"F1XKJAZ99","created":1470199106,"timestamp":1470199106,"name":"mailboxer.png","title":"mailboxer.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U1JAH2D8R","editable":false,"size":407774,"mode":"hosted","is_external":false,"external_type":"","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/files.slack.com\/files-pri\/T0285CSTT-F1XKJAZ99\/mailboxer.png","url_private_download":"https:\/\/files.slack.com\/files-pri\/T0285CSTT-F1XKJAZ99\/download\/mailboxer.png","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_360.png","thumb_360_w":360,"thumb_360_h":100,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_480.png","thumb_480_w":480,"thumb_480_h":133,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_720.png","thumb_720_w":720,"thumb_720_h":199,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_960.png","thumb_960_w":960,"thumb_960_h":266,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1XKJAZ99-b3c1a780e9\/mailboxer_1024.png","thumb_1024_w":1024,"thumb_1024_h":283,"image_exif_rotation":1,"original_w":1088,"original_h":301,"permalink":"https:\/\/agileventures.slack.com\/files\/francis\/F1XKJAZ99\/mailboxer.png","permalink_public":"https:\/\/slack-files.com\/T0285CSTT-F1XKJAZ99-824f4a0de1","channels":["C0GUTH7RS"],"groups":[],"ims":[],"comments_count":1,"initial_comment":{"id":"Fc1XLXEP7G","created":1470199106,"timestamp":1470199106,"user":"U1JAH2D8R","is_intro":true,"comment":"having
         problems when installing the gems. could just be my connection?","channel":""},"preview":null}]},"posts":{"total":0,"matches":[]}}'
     http_version: 
-  recorded_at: Thu, 11 Aug 2016 21:16:34 GMT
+  recorded_at: Fri, 12 Aug 2016 14:31:41 GMT
 - request:
     method: post
     uri: https://slack.com/api/search.all
@@ -2884,16 +2908,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
-      Content-Type:
-      - application/json; charset=utf-8
       Date:
-      - Thu, 11 Aug 2016 21:16:34 GMT
+      - Fri, 12 Aug 2016 14:31:41 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -2913,13 +2941,15 @@ http_interactions:
       X-Slack-Backend:
       - z
       X-Slack-Req-Id:
-      - 7e5972dc-2889-4b6b-95bb-325f39970be1
+      - 5e61808b-1b92-4181-8960-c6e6a08a711e
       X-Xss-Protection:
       - '0'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 188b1ed2d0788bf81a654d83fd67a543.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - "-okZGKKgHz0D58wRkmVlWaze3ahutaa7bfHogC2805a7BRDzil5EYg=="
     body:
       encoding: ASCII-8BIT
       string: '{"ok":true,"query":"from:mtc2013 after:2016-07-30 before:2016-08-07","messages":{"total":42,"pagination":{"total_count":42,"page":1,"per_page":20,"page_count":3,"first":1,"last":20},"paging":{"count":20,"total":42,"page":1,"pages":3},"matches":[{"type":"message","user":"U02B6JMJ6","username":"mtc2013","ts":"1470452498.000040","team":"T0285CSTT","channel":{"id":"C1NJX7KM1","name":"projectscope","is_shared":false,"is_org_shared":false},"permalink":"https:\/\/agileventures.slack.com\/archives\/projectscope\/p1470452498000040","text":"<@U0292M7AC>
@@ -2966,7 +2996,7 @@ http_interactions:
         $1 LIMIT $2  [[&quot;email&quot;, &quot;abc@abc.com&quot;], [&quot;LIMIT&quot;,
         1]]<\/pre><\/div>\n<div><pre><\/pre><\/div>\n<\/div>\n<\/div>\n","lines":20,"lines_more":15,"channels":["C0GUTH7RS"],"groups":[],"ims":[],"comments_count":0}]},"posts":{"total":0,"matches":[]}}'
     http_version: 
-  recorded_at: Thu, 11 Aug 2016 21:16:34 GMT
+  recorded_at: Fri, 12 Aug 2016 14:31:41 GMT
 - request:
     method: post
     uri: https://slack.com/api/search.all
@@ -2987,16 +3017,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
       Content-Security-Policy:
       - referrer no-referrer;
-      Content-Type:
-      - application/json; charset=utf-8
       Date:
-      - Thu, 11 Aug 2016 21:16:34 GMT
+      - Fri, 12 Aug 2016 14:31:42 GMT
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Pragma:
@@ -3016,13 +3050,15 @@ http_interactions:
       X-Slack-Backend:
       - z
       X-Slack-Req-Id:
-      - bc931c68-c1a4-4191-9905-d82dc909a64d
+      - af5f88d1-67b5-4286-90c3-f7c67cdb7bf6
       X-Xss-Protection:
       - '0'
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 5d54f7d67ab3f1ccb26ae4de736754e1.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - DbtNpcJ0VPufVtVw1U2z3VbJAtIYJ5R594vLBq_ljyEI3JDD62LCHA==
     body:
       encoding: ASCII-8BIT
       string: '{"ok":true,"query":"from:tansaku after:2016-07-30 before:2016-08-07","messages":{"total":102,"pagination":{"total_count":102,"page":1,"per_page":20,"page_count":6,"first":1,"last":20},"paging":{"count":20,"total":102,"page":1,"pages":6},"matches":[{"type":"message","user":"U0292M7AC","username":"tansaku","ts":"1470452439.000039","team":"T0285CSTT","channel":{"id":"C1NJX7KM1","name":"projectscope","is_shared":false,"is_org_shared":false},"permalink":"https:\/\/agileventures.slack.com\/archives\/projectscope\/p1470452439000039","text":"<@U02ABDJBA>:
@@ -3060,10 +3096,10 @@ http_interactions:
         me know if there is anything I can do to help you get settled in :slightly_smiling_face:"},{"type":"im","user":"U0292M7AC","username":"tansaku","ts":"1470396336.000002","team":"T0285CSTT","channel":{"id":"D1YJUC27L","name":"U1XPJ6UAE"},"permalink":"https:\/\/agileventures.slack.com\/archives\/D1YJUC27L\/p1470396336000002","text":"Hi
         Miguel, welcome to AgileVentures!"},{"type":"im","user":"U0292M7AC","username":"tansaku","ts":"1470396311.000004","team":"T0285CSTT","channel":{"id":"D1YJKGL4F","name":"U1XL0JZNE"},"permalink":"https:\/\/agileventures.slack.com\/archives\/D1YJKGL4F\/p1470396311000004","text":"let
         me know if there is anything I can do to help you get settled in :slightly_smiling_face:"}]},"files":{"total":4,"pagination":{"total_count":4,"page":1,"per_page":20,"page_count":1,"first":1,"last":4},"paging":{"count":20,"total":4,"page":1,"pages":1},"matches":[{"id":"F1YQAMANP","created":1470448138,"timestamp":1470448138,"name":"Screenshot
-        2016-08-06 10.48.53.png","title":"Screenshot 2016-08-06 10.48.53.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U0292M7AC","editable":false,"size":110753,"mode":"external","is_external":true,"external_type":"dropbox","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/www.dropbox.com\/s\/rhu3u2qmljwizre\/Screenshot%202016-08-06%2010.48.53.png?dl=0","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_360.png","thumb_360_w":360,"thumb_360_h":147,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_480.png","thumb_480_w":480,"thumb_480_h":196,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_720.png","thumb_720_w":720,"thumb_720_h":294,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_960.png","thumb_960_w":960,"thumb_960_h":392,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-3db47fe0c1\/screenshot_2016-08-06_10.48.53_1024.png","thumb_1024_w":1024,"thumb_1024_h":418,"image_exif_rotation":1,"original_w":1132,"original_h":462,"permalink":"https:\/\/agileventures.slack.com\/files\/tansaku\/F1YQAMANP\/screenshot_2016-08-06_10.48.53.png","channels":["C1NJX7KM1"],"groups":[],"ims":[],"comments_count":0,"preview":null},{"id":"F1YS2E6UA","created":1470444892,"timestamp":1470444892,"name":"Screenshot
+        2016-08-06 10.48.53.png","title":"Screenshot 2016-08-06 10.48.53.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U0292M7AC","editable":false,"size":110753,"mode":"external","is_external":true,"external_type":"dropbox","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/www.dropbox.com\/s\/rhu3u2qmljwizre\/Screenshot%202016-08-06%2010.48.53.png?dl=0","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_360.png","thumb_360_w":360,"thumb_360_h":147,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_480.png","thumb_480_w":480,"thumb_480_h":196,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_720.png","thumb_720_w":720,"thumb_720_h":294,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_960.png","thumb_960_w":960,"thumb_960_h":392,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YQAMANP-c6151c0d49\/screenshot_2016-08-06_10.48.53_1024.png","thumb_1024_w":1024,"thumb_1024_h":418,"image_exif_rotation":1,"original_w":1132,"original_h":462,"permalink":"https:\/\/agileventures.slack.com\/files\/tansaku\/F1YQAMANP\/screenshot_2016-08-06_10.48.53.png","channels":["C1NJX7KM1"],"groups":[],"ims":[],"comments_count":0,"preview":null},{"id":"F1YS2E6UA","created":1470444892,"timestamp":1470444892,"name":"Screenshot
         2016-08-06 09.54.34.png","title":"Screenshot 2016-08-06 09.54.34.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U0292M7AC","editable":false,"size":261557,"mode":"external","is_external":true,"external_type":"dropbox","is_public":false,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/www.dropbox.com\/s\/qfhvnp95z2rr0f5\/Screenshot%202016-08-06%2009.54.34.png?dl=0","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_360.png","thumb_360_w":208,"thumb_360_h":360,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_480.png","thumb_480_w":278,"thumb_480_h":480,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_720.png","thumb_720_w":417,"thumb_720_h":720,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_960.png","thumb_960_w":556,"thumb_960_h":960,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YS2E6UA-9165b058f7\/screenshot_2016-08-06_09.54.34_1024.png","thumb_1024_w":593,"thumb_1024_h":1024,"image_exif_rotation":1,"original_w":762,"original_h":1316,"permalink":"https:\/\/agileventures.slack.com\/files\/tansaku\/F1YS2E6UA\/screenshot_2016-08-06_09.54.34.png","channels":[],"groups":[],"ims":["D02D0R59P"],"comments_count":0,"preview":null},{"id":"F1YFJBR6C","created":1470368917,"timestamp":1470368917,"name":"Screenshot
-        2016-08-05 12.48.30.png","title":"Screenshot 2016-08-05 12.48.30.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U0292M7AC","editable":false,"size":70238,"mode":"external","is_external":true,"external_type":"dropbox","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/www.dropbox.com\/s\/okjjtuk9wxzxoro\/Screenshot%202016-08-05%2012.48.30.png?dl=0","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_360.png","thumb_360_w":360,"thumb_360_h":138,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_480.png","thumb_480_w":480,"thumb_480_h":184,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_720.png","thumb_720_w":720,"thumb_720_h":276,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_960.png","thumb_960_w":960,"thumb_960_h":368,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-0ddea92ddd\/screenshot_2016-08-05_12.48.30_1024.png","thumb_1024_w":1024,"thumb_1024_h":393,"image_exif_rotation":1,"original_w":1220,"original_h":468,"permalink":"https:\/\/agileventures.slack.com\/files\/tansaku\/F1YFJBR6C\/screenshot_2016-08-05_12.48.30.png","channels":["C1NJX7KM1"],"groups":[],"ims":[],"comments_count":0,"preview":null},{"id":"F1YFRLM39","created":1470368536,"timestamp":1470368536,"name":"Screenshot
-        2016-08-05 12.41.59.png","title":"Screenshot 2016-08-05 12.41.59.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U0292M7AC","editable":false,"size":206979,"mode":"external","is_external":true,"external_type":"dropbox","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/www.dropbox.com\/s\/dkhjgutsunco1b2\/Screenshot%202016-08-05%2012.41.59.png?dl=0","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_360.png","thumb_360_w":360,"thumb_360_h":201,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_480.png","thumb_480_w":480,"thumb_480_h":267,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_720.png","thumb_720_w":720,"thumb_720_h":401,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_960.png","thumb_960_w":960,"thumb_960_h":535,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-61b1278d19\/screenshot_2016-08-05_12.41.59_1024.png","thumb_1024_w":1024,"thumb_1024_h":570,"image_exif_rotation":1,"original_w":2750,"original_h":1532,"permalink":"https:\/\/agileventures.slack.com\/files\/tansaku\/F1YFRLM39\/screenshot_2016-08-05_12.41.59.png","channels":["C1NJX7KM1"],"groups":[],"ims":[],"comments_count":0,"preview":null}]},"posts":{"total":0,"matches":[]}}'
+        2016-08-05 12.48.30.png","title":"Screenshot 2016-08-05 12.48.30.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U0292M7AC","editable":false,"size":70238,"mode":"external","is_external":true,"external_type":"dropbox","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/www.dropbox.com\/s\/okjjtuk9wxzxoro\/Screenshot%202016-08-05%2012.48.30.png?dl=0","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_360.png","thumb_360_w":360,"thumb_360_h":138,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_480.png","thumb_480_w":480,"thumb_480_h":184,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_720.png","thumb_720_w":720,"thumb_720_h":276,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_960.png","thumb_960_w":960,"thumb_960_h":368,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFJBR6C-1ee03b954b\/screenshot_2016-08-05_12.48.30_1024.png","thumb_1024_w":1024,"thumb_1024_h":393,"image_exif_rotation":1,"original_w":1220,"original_h":468,"permalink":"https:\/\/agileventures.slack.com\/files\/tansaku\/F1YFJBR6C\/screenshot_2016-08-05_12.48.30.png","channels":["C1NJX7KM1"],"groups":[],"ims":[],"comments_count":0,"preview":null},{"id":"F1YFRLM39","created":1470368536,"timestamp":1470368536,"name":"Screenshot
+        2016-08-05 12.41.59.png","title":"Screenshot 2016-08-05 12.41.59.png","mimetype":"image\/png","filetype":"png","pretty_type":"PNG","user":"U0292M7AC","editable":false,"size":206979,"mode":"external","is_external":true,"external_type":"dropbox","is_public":true,"public_url_shared":false,"display_as_bot":false,"username":"","url_private":"https:\/\/www.dropbox.com\/s\/dkhjgutsunco1b2\/Screenshot%202016-08-05%2012.41.59.png?dl=0","thumb_64":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_64.png","thumb_80":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_80.png","thumb_360":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_360.png","thumb_360_w":360,"thumb_360_h":201,"thumb_480":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_480.png","thumb_480_w":480,"thumb_480_h":267,"thumb_160":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_160.png","thumb_720":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_720.png","thumb_720_w":720,"thumb_720_h":401,"thumb_960":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_960.png","thumb_960_w":960,"thumb_960_h":535,"thumb_1024":"https:\/\/files.slack.com\/files-tmb\/T0285CSTT-F1YFRLM39-df73eff6bf\/screenshot_2016-08-05_12.41.59_1024.png","thumb_1024_w":1024,"thumb_1024_h":570,"image_exif_rotation":1,"original_w":2750,"original_h":1532,"permalink":"https:\/\/agileventures.slack.com\/files\/tansaku\/F1YFRLM39\/screenshot_2016-08-05_12.41.59.png","channels":["C1NJX7KM1"],"groups":[],"ims":[],"comments_count":0,"preview":null}]},"posts":{"total":0,"matches":[]}}'
     http_version: 
-  recorded_at: Thu, 11 Aug 2016 21:16:35 GMT
+  recorded_at: Fri, 12 Aug 2016 14:31:42 GMT
 recorded_with: VCR 3.0.3
