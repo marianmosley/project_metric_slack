@@ -12,12 +12,8 @@ class ProjectMetricSlack
   def image
     return @image if @image
     refresh unless @raw_data
-    num_of_members = @raw_data.length
     normalized_member_scores = normalize_member_scores(@raw_data)
-    @member_colors = {}
-    normalized_member_scores.each do |name, normalized_score|
-      @member_colors[name] = Color::rgb_to_hex(Color::score_to_rgb(normalized_score))
-    end
+    @member_colors = compute_member_hex_colors_for_heatmap(normalized_member_scores)
     file_path = File.join(File.dirname(__FILE__),'svg.erb')
     @image = ERB.new(File.read(file_path)).result(self.send(:binding))
   end
@@ -33,6 +29,14 @@ class ProjectMetricSlack
   end
 
   private
+
+  def compute_member_hex_colors_for_heatmap normalized_member_scores
+    member_colors = {}
+    normalized_member_scores.each do |name, normalized_score|
+      member_colors[name] = Color::rgb_to_hex(Color::score_to_rgb(normalized_score))
+    end
+    member_colors
+  end
 
   def get_slack_message_totals
     member_names = get_member_names_for_channel
