@@ -1,7 +1,6 @@
 <% @image_rows = (@member_colors.length/3.0).ceil%>
 <svg width="60" height="<%= 20*@image_rows%>">
     <%@members_already_drawn = 0%>
-    <%@currently_drawing_row_number = 1%>
     <%@member_colors.each do |_,color|%>
       <% @y_pos = (@members_already_drawn/3)*20 %>
       <% @x_pos = (@members_already_drawn % 3)*20%>
