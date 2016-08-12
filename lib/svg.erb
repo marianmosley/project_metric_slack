@@ -8,4 +8,12 @@
       </rect>
       <%@members_already_drawn+=1%>
     <%end%>
+    <% @blank_spaces_left = (@image_rows * 3) - @members_already_drawn%>
+    <% @blank_spaces_left.times do |i| %>
+      <% @y_pos = ((@members_already_drawn+i)/3)*20 %>
+      <% @x_pos = ((@members_already_drawn+i) % 3)*20%>
+      <rect x="<%=@x_pos%>" y="<%=@y_pos%>" width="20" height="20" style="fill:#ffffff;stroke:black">
+      </rect>
+    <%end%>
+
 </svg>

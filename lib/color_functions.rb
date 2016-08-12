@@ -15,6 +15,6 @@ module Color
   end
 
   def self.rgb_to_hex(rgb)
-    ("%02x" % rgb[:red]) + ("%02x" % rgb[:green]) + ("%02x" % rgb[:blue])
+    "#"+("%02x" % rgb[:red]) + ("%02x" % rgb[:green]) + ("%02x" % rgb[:blue])
   end
 end
