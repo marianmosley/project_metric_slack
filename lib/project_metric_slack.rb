@@ -1,4 +1,5 @@
 require 'slack'
+require 'color_functions'
 class ProjectMetricSlack
 
   attr_reader :raw_data
@@ -78,7 +79,7 @@ class ProjectMetricSlack
     maximum_value = key_values_sorted_by_value[key_values_sorted_by_value.length-1][1]
     normalized_member_scores = {}
     member_scores.each do |name, num_messages|
-      normalized_member_scores[name] = (num_messages - minimum_value)/(maximum_value - minimum_value).to_f
+      normalized_member_scores[name] = (num_messages - minimum_value)/[(maximum_value - minimum_value),1].max.to_f
     end
     normalized_member_scores
   end

@@ -5,6 +5,8 @@ describe ProjectMetricSlack, :vcr do
   let(:raw_data){{"armandofox"=>5, "francis"=>0, "mtc2013"=>2, "tansaku"=>10}}
   let(:raw_data_two){{"armandofox"=>0, "francis"=>0, "mtc2013"=>0, "tansaku"=>10}}
   let(:svg_two) { File.read './spec/data/sample_two.svg' }
+  let(:svg_equality) { File.read './spec/data/sample_equality.svg' }
+
   context '#raw_data' do
     it 'fetches raw data' do
       metric = ProjectMetricSlack.new(channel: 'projectscope')
@@ -38,6 +40,10 @@ describe ProjectMetricSlack, :vcr do
     it 'uses cached raw_data if it exists' do
       metric = ProjectMetricSlack.new({channel: 'projectscope'}, raw_data_two)
       expect(metric.image).to eq svg_two
+    end
+    it 'deals gracefully with max = min' do
+      metric = ProjectMetricSlack.new({channel: 'projectscope'}, {"armandofox"=> 5, "mtc2013"=> 5})
+      expect(metric.image).to eq svg_equality
     end
   end
   context '#raw_data=' do
