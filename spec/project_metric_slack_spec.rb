@@ -17,15 +17,15 @@ describe ProjectMetricSlack, :vcr do
   context '#score' do
     it 'returns gini coefficient for cached raw_data' do
       metric = ProjectMetricSlack.new({channel: 'projectscope'}, raw_data)
-      expect(metric.score).to eq 0.4852941176470589
+      expect(metric.score).to eq (1-0.4852941176470589)
     end
     it 'fetches raw data if not already cached and computes gini' do
       metric = ProjectMetricSlack.new channel: 'projectscope'
-      expect(metric.score).to eq 0.4852941176470589
+      expect(metric.score).to eq (1-0.4852941176470589)
     end
     it 'uses cached raw_data if it exists' do
       metric = ProjectMetricSlack.new({channel: 'projectscope'}, raw_data_two)
-      expect(metric.score).to eq 0.75
+      expect(metric.score).to eq (1-0.75)
     end
   end
   context '#image' do
@@ -58,9 +58,9 @@ describe ProjectMetricSlack, :vcr do
       expect(subject.image).to eq svg_two
     end
     it 'sets score as uncached' do
-      expect(subject.score).to eq 0.4852941176470589
+      expect(subject.score).to eq (1-0.4852941176470589)
       subject.raw_data = raw_data_two
-      expect(subject.score).to eq 0.75
+      expect(subject.score).to eq (1-0.75)
     end
   end
 end

@@ -13,7 +13,7 @@ class ProjectMetricSlack
   def score
     return @score if @score
     refresh unless @raw_data
-    @score = gini_coefficient(@raw_data.map{|name,msg_total| msg_total})
+    @score = (1-gini_coefficient(@raw_data.map{|name,msg_total| msg_total}))
   end
 
   def image
