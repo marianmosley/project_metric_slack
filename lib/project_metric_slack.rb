@@ -9,6 +9,12 @@ class ProjectMetricSlack
     @client = Slack::Web::Client.new(token: ENV["SLACK_API_TOKEN"])
   end
 
+  def score
+    return @score if @score
+    refresh unless @raw_data
+    @score = gini_coefficient(@raw_data.map{|name,msg_total| msg_total})
+  end
+
   def image
     return @image if @image
     refresh unless @raw_data
@@ -25,10 +31,21 @@ class ProjectMetricSlack
 
   def raw_data=(new)
     @raw_data = new
-    @image = nil
+    @score = @image = nil
   end
 
   private
+
+  def gini_coefficient(array)
+    sorted = array.sort
+    temp = 0.0
+    n = sorted.length
+    array_sum = array.inject(0){|sum,x| sum + x }
+    (0..(n-1)).each do |i|
+      temp += (n-i)*sorted[i]
+    end
+    return (n+1).to_f/ n - 2.0 * temp / ((array_sum)*n)
+  end
 
   def compute_member_hex_colors_for_heatmap normalized_member_scores
     member_colors = {}
