@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = "slack_project_metrics"
+  s.name = "project_metric_slack"
   s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
