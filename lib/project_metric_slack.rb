@@ -11,11 +11,13 @@ class ProjectMetricSlack
   def image
     num_of_members = @raw_data.length
     normalized_member_scores = normalize_member_scores(@raw_data)
-    member_colors = {}
+    @member_colors = {}
     normalized_member_scores.each do |name, normalized_score|
-      member_colors[name] = Color::score_to_rgb(normalized_score)
+      @member_colors[name] = Color::rgb_to_hex(Color::score_to_rgb(normalized_score))
     end
-    member_colors
+    puts @member_colors.length
+    file_path = File.join(File.dirname(__FILE__),'svg.erb')
+    ERB.new(File.read(file_path)).result(self.send(:binding))
   end
 
   def refresh
