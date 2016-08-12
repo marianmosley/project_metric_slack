@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.authors = ["Sam Joseph", "mtc2013"]
   s.date = "2016-08-12"
-  s.description = "Project metrics from code climate"
+  s.description = "Project metrics from slack"
   s.email = "sam@agileventues.org"
   s.files = ["lib/project_metric_slack.rb"]
   s.homepage = "https://github.com/AgileVentures/code_climate_project_metrics"
