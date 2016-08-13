@@ -7,7 +7,7 @@ class ProjectMetricSlack
   def initialize credentials, raw_data=nil
     @raw_data = raw_data
     @channel = credentials[:channel]
-    @client = Slack::Web::Client.new(token: ENV["SLACK_API_TOKEN"])
+    @client = Slack::Web::Client.new(token: credentials[:token])
   end
 
   def score
