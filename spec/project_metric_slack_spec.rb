@@ -2,8 +2,8 @@ require 'project_metric_slack'
 
 describe ProjectMetricSlack, :vcr do
   let(:svg) { File.read './spec/data/sample.svg' }
-  let(:raw_data){{"armandofox"=>5, "francis"=>0, "mtc2013"=>2, "tansaku"=>10}}
-  let(:raw_data_two){{"armandofox"=>0, "francis"=>0, "mtc2013"=>0, "tansaku"=>10}}
+  let(:raw_data) { {'armandofox' => 5, 'francis' => 0, 'mtc2013' => 2, 'tansaku' => 10} }
+  let(:raw_data_two) { {'armandofox' => 0, 'francis' => 0, 'mtc2013' => 0, 'tansaku' => 10} }
   let(:svg_two) { File.read './spec/data/sample_two.svg' }
   let(:svg_equality) { File.read './spec/data/sample_equality.svg' }
 
@@ -14,6 +14,7 @@ describe ProjectMetricSlack, :vcr do
       expect(metric.raw_data).to eq(raw_data)
     end
   end
+
   context '#score' do
     it 'returns gini coefficient for cached raw_data' do
       metric = ProjectMetricSlack.new({channel: 'projectscope'}, raw_data)
@@ -28,6 +29,7 @@ describe ProjectMetricSlack, :vcr do
       expect(metric.score).to eq (1-0.75)
     end
   end
+
   context '#image' do
     it 'provides expected image using cached raw_data' do
       metric = ProjectMetricSlack.new({channel: 'projectscope'}, raw_data)
@@ -42,12 +44,13 @@ describe ProjectMetricSlack, :vcr do
       expect(metric.image).to eq svg_two
     end
     it 'deals gracefully with max = min' do
-      metric = ProjectMetricSlack.new({channel: 'projectscope'}, {"armandofox"=> 5, "mtc2013"=> 5})
+      metric = ProjectMetricSlack.new({channel: 'projectscope'}, {'armandofox' => 5, 'mtc2013' => 5})
       expect(metric.image).to eq svg_equality
     end
   end
+
   context '#raw_data=' do
-    let(:subject){ProjectMetricSlack.new(channel: 'projectscope')}
+    let(:subject) { ProjectMetricSlack.new(channel: 'projectscope') }
     it 'sets raw_data appropriately' do
       subject.raw_data = raw_data
       expect(subject.raw_data).to eq raw_data
