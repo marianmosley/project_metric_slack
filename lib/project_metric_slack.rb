@@ -22,7 +22,7 @@ class ProjectMetricSlack
     normalized_member_scores = normalize_member_scores(@raw_data)
     @member_colors = compute_member_hex_colors_for_heatmap(normalized_member_scores)
     file_path = File.join(File.dirname(__FILE__), 'svg.erb')
-    @image = ERB.new(File.read(file_path)).result(self.send(:binding))
+    @image = ERB.new(File.read(file_path), nil, '-').result(self.send(:binding))
   end
 
   def refresh

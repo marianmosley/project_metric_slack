@@ -1,25 +1,5 @@
-
 <svg width="60" height="20">
-    
-    
-      
-      
-      <rect x="0" y="0" width="20" height="20" style="fill:#ff0000;stroke:black">
-      </rect>
-      
-    
-      
-      
-      <rect x="20" y="0" width="20" height="20" style="fill:#ff0000;stroke:black">
-      </rect>
-      
-    
-    
-    
-      
-      
-      <rect x="40" y="0" width="20" height="20" style="fill:#ffffff;stroke:black">
-      </rect>
-    
-
+  <rect x="0" y="0" width="20" height="20" style="fill:#ff0000;stroke:black"></rect>
+  <rect x="20" y="0" width="20" height="20" style="fill:#ff0000;stroke:black"></rect>
+  <rect x="40" y="0" width="20" height="20" style="fill:#ffffff;stroke:black"></rect>
 </svg>
