@@ -49,23 +49,19 @@ class ProjectMetricSlack
   end
 
   def compute_member_hex_colors_for_heatmap normalized_member_scores
-    member_colors = {}
-    normalized_member_scores.each do |name, normalized_score|
-      member_colors[name] = Color::rgb_to_hex(Color::score_to_rgb(normalized_score))
+    normalized_member_scores.inject({}) do | member_colors, (name, normalized_score) |
+      member_colors.merge name => Color::rgb_to_hex(Color::score_to_rgb(normalized_score))
     end
-    member_colors
   end
 
   def get_slack_message_totals
     member_names = get_member_names_for_channel
     start_time = (Time.now - (7+Time.now.wday+1).days).to_s[0, 10]
     end_time = (Time.now - (Time.now.wday).days).to_s[0, 10]
-    slack_message_totals = {}
-    member_names.each do |user_name|
+    member_names.inject({}) do |slack_message_totals, user_name|
       num_messages = @client.search_all(query: "from:#{user_name} after:#{start_time} before:#{end_time}").messages.matches.select { |m| m.channel.name == @channel }.length
-      slack_message_totals[user_name] = num_messages
+      slack_message_totals.merge user_name => num_messages
     end
-    slack_message_totals
   end
 
   def get_member_names_for_channel
@@ -77,10 +73,8 @@ class ProjectMetricSlack
     key_values_sorted_by_value = member_scores.sort_by { |k, v| v }
     minimum_value = key_values_sorted_by_value[0][1]
     maximum_value = key_values_sorted_by_value[key_values_sorted_by_value.length-1][1]
-    normalized_member_scores = {}
-    member_scores.each do |name, num_messages|
-      normalized_member_scores[name] = (num_messages - minimum_value)/[(maximum_value - minimum_value), 1].max.to_f
+    member_scores.inject({}) do |normalized_member_scores, (name, num_messages)|
+      normalized_member_scores.merge name => (num_messages - minimum_value)/[(maximum_value - minimum_value), 1].max.to_f
     end
-    normalized_member_scores
   end
 end
