@@ -48,6 +48,7 @@ describe ProjectMetricSlack, :vcr do
       metric = ProjectMetricSlack.new({channel: 'projectscope', token: ENV["SLACK_API_TOKEN"]}, raw_data_two)
       expect(metric.image).to eq svg_two
     end
+
     it 'deals gracefully with max = min' do
       metric = ProjectMetricSlack.new({channel: 'projectscope', token: ENV["SLACK_API_TOKEN"]}, {'armandofox' => 5, 'mtc2013' => 5})
       expect(metric.image).to eq svg_equality
