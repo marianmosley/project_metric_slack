@@ -5,4 +5,7 @@ For assessing Slack activity using the gini coefficient.
 
 TODO 
 
-* [ ] vcr setup into a different file? 
+* [x] vcr setup into a different file
+* [ ] remove memoization?
+* [ ] DRY out to inject with indices
+* [ ] can we make fewer queries - i.e. to channels directly
