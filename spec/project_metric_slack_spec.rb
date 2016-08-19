@@ -3,7 +3,12 @@ require 'project_metric_slack'
 describe ProjectMetricSlack, :vcr do
 
   let(:svg) { File.read './spec/data/sample.svg' }
-  let(:raw_data) { {'armandofox' => 5, 'francis' => 0, 'mtc2013' => 2, 'tansaku' => 10} }
+  let(:raw_data) { {'an_ju' => 0,
+                    'armandofox' => 0,
+                    'francis' => 0,
+                    'intfrr' => 0,
+                    'mtc2013' => 300,
+                    'tansaku' => 174} }
   let(:raw_data_two) { {'armandofox' => 0, 'francis' => 0, 'mtc2013' => 0, 'tansaku' => 10} }
   let(:svg_two) { File.read './spec/data/sample_two.svg' }
   let(:svg_equality) { File.read './spec/data/sample_equality.svg' }
@@ -19,12 +24,12 @@ describe ProjectMetricSlack, :vcr do
   context '#score' do
     it 'returns gini coefficient for cached raw_data' do
       metric = ProjectMetricSlack.new({channel: 'projectscope', token: ENV["SLACK_API_TOKEN"]}, raw_data)
-      expect(metric.score).to eq (1-0.4852941176470589)
+      expect(metric.score).to eq (0.2890295358649788)
     end
 
     it 'fetches raw data if not already cached and computes gini' do
       metric = ProjectMetricSlack.new(channel: 'projectscope', token: ENV["SLACK_API_TOKEN"])
-      expect(metric.score).to eq (1-0.4852941176470589)
+      expect(metric.score).to eq (0.2890295358649788)
     end
 
     it 'uses cached raw_data if it exists' do
@@ -70,7 +75,7 @@ describe ProjectMetricSlack, :vcr do
     end
 
     it 'sets score as uncached' do
-      expect(subject.score).to eq (1-0.4852941176470589)
+      expect(subject.score).to eq (0.2890295358649788)
       subject.raw_data = raw_data_two
       expect(subject.score).to eq (1-0.75)
     end
