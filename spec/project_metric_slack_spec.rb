@@ -1,7 +1,7 @@
 require 'project_metric_slack'
 
 describe ProjectMetricSlack, :vcr do
-  
+
   let(:svg) { File.read './spec/data/sample.svg' }
   let(:raw_data) { {'armandofox' => 5, 'francis' => 0, 'mtc2013' => 2, 'tansaku' => 10} }
   let(:raw_data_two) { {'armandofox' => 0, 'francis' => 0, 'mtc2013' => 0, 'tansaku' => 10} }
@@ -48,6 +48,7 @@ describe ProjectMetricSlack, :vcr do
       metric = ProjectMetricSlack.new({channel: 'projectscope', token: ENV["SLACK_API_TOKEN"]}, raw_data_two)
       expect(metric.image).to eq svg_two
     end
+
     it 'deals gracefully with max = min' do
       metric = ProjectMetricSlack.new({channel: 'projectscope', token: ENV["SLACK_API_TOKEN"]}, {'armandofox' => 5, 'mtc2013' => 5})
       expect(metric.image).to eq svg_equality
