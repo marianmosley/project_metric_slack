@@ -55,9 +55,8 @@ class ProjectMetricSlack
     end_time = (Time.now - (Time.now.wday).days).to_s[0, 10]
     date_range = "after:#{start_time} before:#{end_time}"
     get_member_names_for_channel.inject({}) do |slack_message_totals, user_name|
-      messages = @client.search_all(query: "from:#{user_name} #{date_range}").messages
-      num_messages = messages.matches.select { |m| m.channel.name == @channel }.length
-      slack_message_totals.merge user_name => num_messages
+      messages = @client.search_all(query: "from:#{user_name} in:#{@channel} #{date_range}").messages
+      slack_message_totals.merge user_name => messages.total
     end
   end
 
